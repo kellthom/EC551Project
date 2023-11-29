@@ -6,7 +6,9 @@ module parse(
     input[7:0] data_in,
     input reset,
     input clk,
-    output reg[7:0] data_out,
+    output reg[7:0] data_out_r,
+    output reg[7:0] data_out_g,
+    output reg[7:0] data_out_b,
     output reg [15:0] height,
     output reg [15:0] width,
     output reg data_ready
@@ -43,7 +45,15 @@ module parse(
         //Rest of bytes are rgb data
         if (count>3) begin
             data_ready=1;
-            data_out=data_in;
+            if((count-4)%3==0) begin
+                data_out_r=data_in;
+            end
+            if((count-4)%3==1) begin
+                data_out_g=data_in;
+            end
+            if((count-4)%3==2) begin
+                data_out_b=data_in;
+            end
         end
         
         count=count+1;
