@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-
+//Thomas Kelly
 
 module parse(
     input[7:0] data_in,
@@ -16,6 +16,9 @@ module parse(
     
     //Count clock cycles
     integer count=0;
+    
+    reg[7:0] data_r;
+    reg[7:0] data_g;
     
     initial begin
         data_ready=0;//Indictaes that the height and width have not yet been passed through
@@ -33,7 +36,7 @@ module parse(
             height[15:8]=data_in;
         end
         
-        //Second and third byte reserves for width
+        //Second and third byte reserved for width
         if (count==2) begin
             width[7:0]=data_in;
         end
@@ -46,13 +49,15 @@ module parse(
         if (count>3) begin
             data_ready=1;
             if((count-4)%3==0) begin
-                data_out_r=data_in;
+                data_r=data_in;
             end
             if((count-4)%3==1) begin
-                data_out_g=data_in;
+                data_g=data_in;
             end
             if((count-4)%3==2) begin
                 data_out_b=data_in;
+                data_out_r=data_r;
+                data_out_g=data_g;
             end
         end
         
