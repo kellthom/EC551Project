@@ -26,7 +26,7 @@ module uart_receiver(
     input wire rx,
     output reg [7:0] data,
     output reg data_valid
-);
+    );
 
     parameter CLK_FREQ = 100_000_000;
     parameter BAUD_RATE = 101_50000;
@@ -35,7 +35,7 @@ module uart_receiver(
     // State Definitions
     localparam [2:0] IDLE = 3'd0, START = 3'd1, RXDATA = 3'd2, STOP = 3'd3, CLEANUP = 3'd4;
 
-    reg [2:0] current_state, next_state;
+    reg [2:0] current_state =0, next_state = 0;
     reg [31:0] clk_counter = 32'd0;
     reg [2:0] bit_index = 3'd0;
     reg [7:0] shift_reg = 8'd0;
@@ -43,24 +43,25 @@ module uart_receiver(
     always @(posedge clk) begin
         if(reset) begin
             current_state <= IDLE;
-            clk_counter <= 0;
+            next_state <= IDLE;
+            clk_counter = 0;
             bit_index <= 0;
             shift_reg <= 0;
             data <= 0;
             data_valid <= 0;
         end else begin
-            current_state = next_state;
+            
             case (current_state)
                 IDLE :					// Default State
 					begin
-						clk_counter <= 0;
-						bit_index <= 0;
-						data_valid <= 1'b0;
+						clk_counter= 0;
+						bit_index = 0;
+						data_valid = 1'b0;
 						if(rx == 1'b0)
-							next_state <= START;
+							next_state = START;
 						else
 							 begin
-							     next_state <= IDLE;
+							     next_state = IDLE;
 							 end
 					end
                 START: begin
@@ -68,65 +69,65 @@ module uart_receiver(
 							begin
 								if(rx == 1'b0)
 									begin
-										clk_counter <= 0;
-										next_state <= RXDATA;
+										clk_counter = 0;
+										next_state = RXDATA;
 									end
 								else
-									next_state <= IDLE;	
+									next_state = IDLE;	
 							end
 						else
 							begin
-								clk_counter <= clk_counter + 1;
-								next_state <= START;
+								clk_counter = clk_counter + 1;
+								next_state = START;
 							end
 					end
                 RXDATA: 					
                 begin
 						if(clk_counter < BAUD_VAL-1)		//We were on the middle of the first bit and now, we are on the middle of the next bit which is the first bit of Data bits.
 							begin
-								clk_counter <= clk_counter + 1;
-								next_state <= RXDATA;
+								clk_counter = clk_counter + 1;
+								next_state = RXDATA;
 							end
 						else
 							begin
-								clk_counter <= 0;
-								data[bit_index] <= rx;	//We are creating an output BYTE by writing every index of bit one by one.
+								clk_counter = 0;
+								data[bit_index] = rx;	//We are creating an output BYTE by writing every index of bit one by one.
 								
 								if(bit_index <7)
 									begin
-										bit_index <= bit_index + 1;
-										next_state <= RXDATA;
+										bit_index = bit_index + 1;
+										next_state = RXDATA;
 									end
 								else
 									begin
-										bit_index <= 0;
-										next_state <= STOP;
+										bit_index = 0;
+										next_state = STOP;
 									end
 							end
 					end
                 STOP: begin
 						if(clk_counter < BAUD_VAL-1)
 							begin
-								clk_counter <= clk_counter + 1;
-								next_state <= STOP;
+								clk_counter = clk_counter + 1;
+								next_state = STOP;
 							end
 						else
 							begin
-								data_valid <= 1'b1;
-								clk_counter <= 0;
-								next_state <= CLEANUP;
+								data_valid = 1'b1;
+								clk_counter = 0;
+								next_state = CLEANUP;
 								
 							end
 					end
 				//This is for 1 clock cycle delay and returning to the default flow				
 				CLEANUP: begin
-						data_valid <= 1'b0;
-						next_state <= IDLE;
+						data_valid = 1'b0;
+						next_state = IDLE;
 					end
 				default:
-				next_state <= IDLE;
+				next_state = IDLE;
             endcase
-            
+            current_state = next_state;
 		end	
 	end
 	
