@@ -23,14 +23,14 @@ module top_module_tb;
 
     initial begin
         clock = 0;
-        forever #0.001 clock = ~clock;
+        forever #1 clock = ~clock;
     end
 
     // Add additional test logic here if necessary
     // For example, you could monitor the output signals and verify their behavior
 
     initial begin
-        #100000;
+        #800000;
         $finish;
     end
 
