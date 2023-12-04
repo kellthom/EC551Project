@@ -50,8 +50,7 @@ module uart_receiver_transmitter_tb();
 //            image_data[i] = 8'hc;
 //        end
 
-        $readmemh("example_image.hex", image_data);
-        file = $fopen("received_data.hex", "w");
+        
     end
     // Clock generation
     always begin
@@ -79,6 +78,9 @@ module uart_receiver_transmitter_tb();
 
 // Testbench
     initial begin
+        $readmemh("example_image.hex", image_data);
+        file = $fopen("received_data.hex", "w");
+    
         // Initialize signals
         
         #50
@@ -97,7 +99,9 @@ module uart_receiver_transmitter_tb();
         end
 
         // Finish
-        #100000000 $finish;
+        #1000
+        $finish;
+        $fclose(file);
     end
 
     //The first UUT is a receiver, receives data from RX pin and turn them into bytes
@@ -137,11 +141,9 @@ module uart_receiver_transmitter_tb();
         .data_valid(data_valid2)
     );
 
-    reg write = 1'b0;
     always @(posedge clk) begin
         if (data_valid2) begin
-            write = ~write;
-            $fwrite(file, "llll%h\n", data2); // Write received byte to file
+            $fwrite(file, "%h\n",data2); // Write received byte to file
         end
     end
 

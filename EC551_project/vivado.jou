@@ -29,3 +29,18 @@ launch_simulation
 source uart_receiver_transmitter_tb.tcl
 relaunch_sim
 relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source uart_receiver_transmitter_tb.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source uart_receiver_transmitter_tb.tcl
