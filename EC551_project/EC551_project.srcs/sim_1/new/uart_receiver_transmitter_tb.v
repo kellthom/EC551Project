@@ -25,7 +25,7 @@ module uart_receiver_transmitter_tb();
     reg rx;
     wire [7:0] data;
     wire data_valid;
-    reg [7:0]  image_data [0:14]; // size of image 640 x 240
+    reg [7:0]  image_data [0:220]; // size of image 640 x 240
     integer i;
     integer j;
 
@@ -36,19 +36,22 @@ module uart_receiver_transmitter_tb();
     // to conver the numbder of clk cycles into nano seconds, * for the two edge of the clk
     localparam BAUD_CLK = BAUD_VAL * 2;
 
-//    initial $readmemh("example.mem", image_data);
+    integer file;
     initial begin
         
-        for (i = 0; i < 5; i = i + 1) begin
-            image_data[i] = 8'ha;
-        end
+//        for (i = 0; i < 5; i = i + 1) begin
+//            image_data[i] = 8'ha;
+//        end
         
-        for (i = 5; i < 10; i = i + 1) begin
-            image_data[i] = 8'hb;
-        end
-        for (i = 10; i < 15; i = i + 1) begin
-            image_data[i] = 8'hc;
-        end
+//        for (i = 5; i < 10; i = i + 1) begin
+//            image_data[i] = 8'hb;
+//        end
+//        for (i = 10; i < 15; i = i + 1) begin
+//            image_data[i] = 8'hc;
+//        end
+
+        $readmemh("example_image.hex", image_data);
+        file = $fopen("received_data.hex", "w");
     end
     // Clock generation
     always begin
@@ -134,5 +137,12 @@ module uart_receiver_transmitter_tb();
         .data_valid(data_valid2)
     );
 
+    reg write = 1'b0;
+    always @(posedge clk) begin
+        if (data_valid2) begin
+            write = ~write;
+            $fwrite(file, "llll%h\n", data2); // Write received byte to file
+        end
+    end
 
 endmodule

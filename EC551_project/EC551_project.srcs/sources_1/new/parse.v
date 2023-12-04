@@ -6,14 +6,12 @@ module parse(
     input[7:0] data_in,
     input reset,
     input clk,
-    
     output reg[7:0] data_out_r,
     output reg[7:0] data_out_g,
     output reg[7:0] data_out_b,
     output reg [15:0] height,
     output reg [15:0] width,
-    output reg data_ready,
-    output reg sample
+    output reg data_ready
     );
     
     //Count clock cycles
@@ -29,7 +27,7 @@ module parse(
   
     
     always@(posedge clk) begin
-        sample=0;
+    
         //Zeroth and first byte reserved for height
         if (count==0) begin
             height[7:0]=data_in;
@@ -57,23 +55,20 @@ module parse(
                 data_g=data_in;
             end
             if((count-4)%3==2) begin
-                sample=1;
                 data_out_b=data_in;
                 data_out_r=data_r;
                 data_out_g=data_g;
             end
         end
         
-        
         count=count+1;
-        
+    
     
     end
     
     always@(posedge reset) begin
         count=0;
         data_ready=0;
-        sample=0;
     end
     
     
