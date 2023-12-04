@@ -1,9 +1,6 @@
 `timescale 1ns / 1ps
 
-module sobel#(
-        parameter H = 391,
-        parameter W = 317
-    )
+module sobel
     (
         input clk,
         input rstn,
@@ -20,7 +17,9 @@ module sobel#(
         output reg[15:0] W_counter  ,
         output reg[15:0] H_counter ,
         output reg [7:0]data_out,
-        output reg ready   
+        output reg ready,
+        input [15:0]H,
+        input [15:0]W 
 
     );    
     
