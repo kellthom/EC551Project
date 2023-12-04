@@ -3,13 +3,17 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Dec  4 15:33:09 2023
-# Process ID: 6620
+# Start of session at: Fri Dec  1 16:21:29 2023
+# Process ID: 3392
 # Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27196 C:\Users\XTYAO\Desktop\551Final\EC551Project\EC551_project\EC551_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37268 C:\Users\XTYAO\Desktop\551Final\EC551Project\EC551_project\EC551_project.xpr
 # Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/vivado.log
 # Journal file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project\vivado.jou
 # Running On: Adelia-laptop, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34088 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source uart_receiver_tb.tcl
+close_sim

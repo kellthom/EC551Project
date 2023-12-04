@@ -3,16 +3,16 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Dec  4 15:33:09 2023
-# Process ID: 6620
+# Start of session at: Mon Dec  4 15:31:27 2023
+# Process ID: 35172
 # Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27196 C:\Users\XTYAO\Desktop\551Final\EC551Project\EC551_project\EC551_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31352 C:\Users\XTYAO\Desktop\551Final\EC551Project\EC551_project\EC551_project.xpr
 # Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/vivado.log
 # Journal file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project\vivado.jou
 # Running On: Adelia-laptop, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34088 MB
 #-----------------------------------------------------------
-start_gui
-open_project C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.xpr
+start_guioopen_project C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.xpr
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
@@ -69,11 +69,19 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_tb.v'.
-Scanning sources...
-Finished scanning sources
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 15:31:52 2023...
+ished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2023.2/data/ip'.
-open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1537.523 ; gain = 300.621
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1490.953 ; gain = 225.336
+update_compile_order -fileset sources_1
+add_files -norecurse {C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/VGA.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/RAM_init.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_module.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_tb.v}
+WARNING: [filemgmt 56-12] File 'C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 15:32:26 2023...
