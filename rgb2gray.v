@@ -9,7 +9,6 @@ module rgb2gray
     input[7:0] data_in_blue,
     output reg ready,
     output reg [7:0] data_out,
-    output reg [31:0]address,
     output reg[15:0]   W_counter ,
     output reg[15:0]   H_counter ,
     input [15:0] H,
@@ -28,7 +27,6 @@ module rgb2gray
 
         if (!rstn) 
         begin
-            address <= 0;
             ready <= 0;
             W_counter<=0;
             H_counter<=0;
