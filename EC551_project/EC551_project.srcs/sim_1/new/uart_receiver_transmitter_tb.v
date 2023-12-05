@@ -34,7 +34,7 @@ module uart_receiver_transmitter_tb(
     integer j;
 
     parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 101_50000;
+    parameter BAUD_RATE = 401_50000;
     localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
     
     // to conver the numbder of clk cycles into nano seconds, * for the two edge of the clk

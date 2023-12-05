@@ -18,6 +18,7 @@ module sobel
         output reg[15:0] H_counter ,
         output reg [7:0]data_out,
         output reg ready,
+        output reg transmit_valid,
         input [15:0]H,
         input [15:0]W 
 
@@ -33,19 +34,21 @@ reg final = 0;
 
  
 always @(posedge clk) begin
-    if(!rstn) begin
+    if(rstn) begin
         W_counter <=0;
         H_counter <= 0; 
         ready  <= 0;
         final <= 0;
+        transmit_valid = 1'b0;
     end
     
     
     else begin
     
-        if(start & !ready) begin
+        if(start && !ready) begin
+        
             data_out <= Gx + Gy;
-            
+            transmit_valid = 1'b1;    
             if(W_counter != W-1-2) begin
                 W_counter <= W_counter + 1;              
             end
@@ -60,8 +63,9 @@ always @(posedge clk) begin
                 ready <= 1;
             end
             
+        end else begin
+            transmit_valid = 1'b0;
         end
-        
         
     end
 end

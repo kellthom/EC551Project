@@ -39,7 +39,7 @@ module uart_transmitter(
     
     
     parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 101_50000;
+    parameter BAUD_RATE = 401_50000;
     localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
     
     //Opposite algorithm of UART Receiver
