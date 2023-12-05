@@ -19,13 +19,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module uart_receiver_transmitter_tb();
+module uart_receiver_transmitter_tb(
+);
+
+    parameter number_of_elements = 512 * 768;
+
     reg clk;
     reg reset;
     reg rx;
     wire [7:0] data;
     wire data_valid;
-    reg [7:0]  image_data [0:220]; // size of image 640 x 240
+    reg [7:0]  image_data [0:number_of_elements]; // size of image 640 x 240
     integer i;
     integer j;
 
@@ -78,7 +82,7 @@ module uart_receiver_transmitter_tb();
 
 // Testbench
     initial begin
-        $readmemh("example_image.hex", image_data);
+        $readmemh("grayscale_image_data.txt", image_data);
         file = $fopen("received_data.hex", "w");
     
         // Initialize signals
@@ -93,13 +97,13 @@ module uart_receiver_transmitter_tb();
         #20 reset = 0;
 
         // Transmit image data
-        for (j = 0; j < 64; j = j + 1) begin
+        for (j = 0; j < number_of_elements + 1; j = j + 1) begin
             transmit_byte(image_data[j]); // Transmit a byte of the image data
             #BAUD_CLK; // Wait for one baud time duration to avoid back-to-back transmission
         end
 
         // Finish
-        #1000
+        #100_000_000
         $finish;
         $fclose(file);
     end
@@ -141,7 +145,7 @@ module uart_receiver_transmitter_tb();
         .data_valid(data_valid2)
     );
 
-    always @(posedge clk) begin
+    always @(data_valid2) begin
         if (data_valid2) begin
             $fwrite(file, "%h\n",data2); // Write received byte to file
         end

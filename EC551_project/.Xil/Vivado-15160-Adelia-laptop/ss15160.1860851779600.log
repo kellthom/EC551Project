@@ -1,0 +1,55 @@
+srcscan starts
+INFO: analyzing module ram_640x480_init (VERI-9002)
+INFO: analyzing module MultiPortROM (VERI-9002)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v(23): ERROR: 'H' is not a constant (VERI-1188)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v(23): ERROR: 'W' is not a constant (VERI-1188)
+INFO: analyzing module top_module_tb (VERI-9002)
+INFO: analyzing module clk_divider (VERI-9002)
+INFO: analyzing module parse (VERI-9002)
+INFO: analyzing module rgb2gray (VERI-9002)
+INFO: analyzing module sobel (VERI-9002)
+INFO: analyzing module sobel_v2 (VERI-9002)
+INFO: analyzing module top_temp (VERI-9002)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(67): INFO: undeclared symbol 'reset', assumed default net type 'wire' (VERI-2561)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(72): WARNING: syntax error near 'sobel' (VERI-1137)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(70): ERROR: 'height' is not a constant (VERI-1188)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(70): ERROR: 'width' is not a constant (VERI-1188)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(71): ERROR: 'height' is not a constant (VERI-1188)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top.v(71): ERROR: 'width' is not a constant (VERI-1188)
+INFO: analyzing module top_module (VERI-9002)
+INFO: analyzing module top_temp (VERI-9002)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(23): WARNING: overwriting previous definition of module 'top_temp' (VERI-1206)
+INFO: analyzing module uart (VERI-9002)
+INFO: analyzing module uart_receiver (VERI-9002)
+INFO: analyzing module uart_receiver_transmitter_tb (VERI-9002)
+INFO: analyzing module uart_transmitter (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:MultiPortROM
+VeriTop library:xil_defaultlib mod:top_module_tb
+VeriTop library:xil_defaultlib mod:clk_divider
+VeriTop library:xil_defaultlib mod:sobel_v2
+VeriTop library:xil_defaultlib mod:top_temp
+VeriTop library:xil_defaultlib mod:top_temp
+VeriTop library:xil_defaultlib mod:uart_receiver_transmitter_tb
+END of tops
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(23): WARNING: top-level design unit 'top_temp' was specified more than once; ignoring 'top_temp' of library 'xil_defaultlib' (VERI-1409)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v(3): INFO: compiling module 'MultiPortROM_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/VGA.v(3): INFO: compiling module 'top_module_tb_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_module.v(21): WARNING: Module <VGA> not found while processing module instance <vga_module> (VERI-1063)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/clk_divider.v(23): INFO: compiling module 'clk_divider_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel_v2.v(23): INFO: compiling module 'sobel_v2_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(23): INFO: compiling module 'top_temp_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(64): WARNING: module instantiation should have an instance name (VERI-1229)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_1/new/uart_receiver_transmitter_tb.v(22): INFO: compiling module 'uart_receiver_transmitter_tb_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(57): ERROR: cannot find port 'sample' on this module (VERI-1010)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v(5): INFO: 'parse' is declared here (VERI-9035)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(60): ERROR: cannot find port 'rom' on this module (VERI-1010)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v(3): INFO: 'rgb2gray' is declared here (VERI-9035)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(60): ERROR: cannot find port 'start' on this module (VERI-1010)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v(3): INFO: 'rgb2gray' is declared here (VERI-9035)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(61): ERROR: cannot find port 'out_sobel' on this module (VERI-1010)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v(3): INFO: 'sobel' is declared here (VERI-9035)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(61): ERROR: cannot find port 'ROM_Gray' on this module (VERI-1010)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v(3): INFO: 'sobel' is declared here (VERI-9035)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/top_temp.v(61): WARNING: port 'data4' is not connected on this instance (VERI-2435)
+srcscan exits with return value 0

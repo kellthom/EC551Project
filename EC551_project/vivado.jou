@@ -44,3 +44,16 @@ relaunch_sim
 close_sim
 launch_simulation
 source uart_receiver_transmitter_tb.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source uart_receiver_transmitter_tb.tcl
+close [ open C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel_v2.v w ]
+add_files C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel_v2.v
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source uart_receiver_transmitter_tb.tcl
