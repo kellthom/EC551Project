@@ -1,2 +1,3 @@
 Time resolution is 1 ps
-INFO: xsimkernel Simulation Memory Usage: 28752 KB (Peak: 28752 KB), Simulation CPU Usage: 226125 ms
+$finish called at time : 57301618 ns : File "C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_2/new/comprehensive_testbench.v" Line 114
+INFO: xsimkernel Simulation Memory Usage: 24012 KB (Peak: 24012 KB), Simulation CPU Usage: 244843 ms

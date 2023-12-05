@@ -47,7 +47,14 @@ always @(posedge clk) begin
     
         if(start && !ready) begin
         
-            data_out <= Gx + Gy;
+//            data_out <= Gx + Gy;
+            
+            if (Gx + Gy > 8'd252) begin
+                data_out = 8'd255;
+            end else begin
+                data_out = 8'd0;
+            end
+            
             transmit_valid = 1'b1;    
             if(W_counter != W-1-2) begin
                 W_counter <= W_counter + 1;              

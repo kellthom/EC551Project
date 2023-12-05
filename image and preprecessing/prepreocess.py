@@ -13,7 +13,7 @@ def image_to_grayscale_bytes_per_line(input_image_path, output_file_path):
             for pixel in list(grayscale_img.getdata()):
                 file.write(f'{pixel:02x}\n')  # Write byte in hexadecimal format
 
-input_image_path = 'iguana.jpg'  # Replace with your image path
+input_image_path = 'flower.jpg'  # Replace with your image path
 output_file_path = 'grayscale_image_data.txt'      # Output file
 image_to_grayscale_bytes_per_line(input_image_path, output_file_path)
 

@@ -110,7 +110,7 @@ module comprehensive_testbench(
         // Finish
 //        #400_000_000
 
-        # 4000000
+        # 40_000_000
         $finish;
         $fclose(file);
     end
