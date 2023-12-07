@@ -32,34 +32,31 @@ module MultiPortRAM
     
 
     always @(posedge clk) begin
+         
         if (data_valid) begin
             rom_memory[write_H][write_W] <= write_data;
             write_W = write_W + 1'b1;
             if(write_W >= W) begin
-            write_H = write_H + 1'b1;
-                if (write_H >= H)begin
-                    all_loaded = 1'b1;
-                end else begin
+                    write_H = write_H + 1'b1;
+                    if (write_H >= H) begin
+                        all_loaded = 1'b1;
+                    end
                     write_W = 16'b0;
-                    
-                end
+            
+           end
+        end else begin
+            if (all_loaded) begin
+                data0 <= rom_memory [read_H][read_W];
+                data1 <= rom_memory [read_H][read_W+1];
+                data2 <= rom_memory [read_H][read_W+2];
+                data3 <= rom_memory [read_H+1][read_W];
+                data4 <= rom_memory [read_H+1][read_W+1];
+                data5 <= rom_memory [read_H+1][read_W+2];
+                data6 <= rom_memory [read_H+2][read_W];
+                data7 <= rom_memory [read_H+2][read_W+1];
+                data8 <= rom_memory [read_H+2][read_W+2];
             end
         end
-        
-        else
-            begin
-                if (all_loaded) begin
-                    data0 <= rom_memory [read_H][read_W];
-                    data1 <= rom_memory [read_H][read_W+1];
-                    data2 <= rom_memory [read_H][read_W+2];
-                    data3 <= rom_memory [read_H+1][read_W];
-                    data4 <= rom_memory [read_H+1][read_W+1];
-                    data5 <= rom_memory [read_H+1][read_W+2];
-                    data6 <= rom_memory [read_H+2][read_W];
-                    data7 <= rom_memory [read_H+2][read_W+1];
-                    data8 <= rom_memory [read_H+2][read_W+2];
-                end
-            end
-        end
+    end
 
 endmodule

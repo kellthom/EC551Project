@@ -20,17 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_receiver(
+module uart_receiver #(parameter BAUD_VAL =9)
+    (
     input wire clk,
     input wire reset,
     input wire rx,
     output reg [7:0] data,
     output reg data_valid
     );
-
-    parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 401_50000;
-    localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
 
     // State Definitions
     localparam [2:0] IDLE = 3'd0, START = 3'd1, RXDATA = 3'd2, STOP = 3'd3, CLEANUP = 3'd4;

@@ -132,8 +132,8 @@ module comprehensive_testbench(
     wire [15:0] read_H, read_W;
     wire [7:0] data0, data1, data2, data3, data4, data5, data6, data7, data8;
     wire [15:0] H, W;
-//    assign H = 16'd512;
-//    assign W = 16'd768; 
+
+
 
 
     assign H = 16'd512;

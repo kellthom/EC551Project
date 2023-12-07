@@ -1,0 +1,17 @@
+srcscan starts
+INFO: analyzing module MultiPortRAM (VERI-9002)
+INFO: analyzing module comprehensive_testbench_v2 (VERI-9002)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v(108): INFO: undeclared symbol 'tx', assumed default net type 'wire' (VERI-2561)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v(108): INFO: undeclared symbol 'tx_active', assumed default net type 'wire' (VERI-2561)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v(108): INFO: undeclared symbol 'tx_done', assumed default net type 'wire' (VERI-2561)
+INFO: analyzing module new_top (VERI-9002)
+INFO: analyzing module parse (VERI-9002)
+INFO: analyzing module rgb2gray (VERI-9002)
+INFO: analyzing module sobel (VERI-9002)
+INFO: analyzing module uart_receiver (VERI-9002)
+INFO: analyzing module uart_transmitter (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:comprehensive_testbench_v2
+END of tops
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v(23): INFO: compiling module 'comprehensive_testbench_v2_default' (VERI-1018)
+srcscan exits with return value 0

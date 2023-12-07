@@ -1,0 +1,22 @@
+srcscan starts
+INFO: analyzing module MultiPortRAM (VERI-9002)
+INFO: analyzing module parse (VERI-9002)
+INFO: analyzing module rgb2gray (VERI-9002)
+INFO: analyzing module sobel (VERI-9002)
+INFO: analyzing module uart_receiver (VERI-9002)
+INFO: analyzing module uart_transmitter (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:MultiPortRAM
+VeriTop library:xil_defaultlib mod:parse
+VeriTop library:xil_defaultlib mod:rgb2gray
+VeriTop library:xil_defaultlib mod:sobel
+VeriTop library:xil_defaultlib mod:uart_receiver
+VeriTop library:xil_defaultlib mod:uart_transmitter
+END of tops
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v(3): INFO: compiling module 'MultiPortRAM_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v(5): INFO: compiling module 'parse_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v(3): INFO: compiling module 'rgb2gray_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v(3): INFO: compiling module 'sobel_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v(23): INFO: compiling module 'uart_receiver_default' (VERI-1018)
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v(23): INFO: compiling module 'uart_transmitter_default' (VERI-1018)
+srcscan exits with return value 0

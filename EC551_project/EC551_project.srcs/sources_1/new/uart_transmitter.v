@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_transmitter(
+module uart_transmitter#(parameter BAUD_VAL =9)
+    (
     input clk,
     input data_valid,						//Data Valid
     input reset,
@@ -37,11 +38,6 @@ module uart_transmitter(
     reg [2:0] bit_index = 3'b0;				//Index counter variable for receiving data
     reg [7:0] tx_byte = 8'b0;				//Variable which will be transmitted data as byte domain
     
-    
-    parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 401_50000;
-    localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
-    
     //Opposite algorithm of UART Receiver
     
     always@(posedge clk) begin
@@ -50,7 +46,7 @@ module uart_transmitter(
             next_state <= IDLE;
             clk_counter <= 0;
             bit_index <= 0;
-            tx <= 1'b0;
+            tx <= 1'b1;
             tx_active <= 1'b0;
             tx_done <= 1'b0;
         end else begin

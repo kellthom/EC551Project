@@ -1,0 +1,21 @@
+srcscan starts
+srcscan exits with return value 0
+M (VERI-9002)
+INFO: analyzing module rgb2gray (VERI-9002)
+INFO: analyzing module sobel (VERI-9002)
+INFO: analyzing module uart_receiver (VERI-9002)
+INFO: analyzing module uart_transmitter (VERI-9002)
+INFO: analyzing module parse (VERI-9002)
+INFO: analyzing module MultiPortRAM (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist11875118299977291956.tmp(3): WARNING: overwriting previous definition of module 'MultiPortRAM' (VERI-1206)
+INFO: analyzing module rgb2gray (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist14498939622650992803.tmp(3): WARNING: overwriting previous definition of module 'rgb2gray' (VERI-1206)
+INFO: analyzing module sobel (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist17682515892480603815.tmp(3): WARNING: overwriting previous definition of module 'sobel' (VERI-1206)
+INFO: analyzing module uart_receiver (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist602352195529988133.tmp(23): WARNING: overwriting previous definition of module 'uart_receiver' (VERI-1206)
+INFO: analyzing module uart_transmitter (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist17763127727493768613.tmp(23): WARNING: overwriting previous definition of module 'uart_transmitter' (VERI-1206)
+INFO: analyzing module parse (VERI-9002)
+C:/Users/XTYAO/AppData/Local/Temp/VivadoEditorAssist10474270561233981742.tmp(5): WARNING: overwriting previous definition of module 'parse' (VERI-1206)
+srcscan exits with return value 0
