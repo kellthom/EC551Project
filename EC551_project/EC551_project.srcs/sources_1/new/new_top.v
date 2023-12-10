@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module new_top #(parameter number_of_elements = 768 * 512 * 3 + 4, BAUD_VAL =9) 
+module new_top #(parameter BAUD_VAL =9) 
 (
     input clk,
     input reset,
