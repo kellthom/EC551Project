@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Dec 10 18:52:13 2023
+# Process ID: 3116
+# Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1
+# Command line: vivado.exe -log new_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source new_top.tcl
+# Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/new_top.vds
+# Journal file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1\vivado.jou
+# Running On: Adelia-laptop, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34088 MB
+#-----------------------------------------------------------
+source new_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 485.141 ; gain = 178.891
+Command: synth_design -top new_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8000
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1334.836 ; gain = 438.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'new_top' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/new_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v:23]
+	Parameter BAUD_VAL bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parse' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'parse' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v:5]
+INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v:3]
+INFO: [Synth 8-6157] synthesizing module 'MultiPortRAM' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MultiPortRAM' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v:3]
+INFO: [Synth 8-6157] synthesizing module 'sobel' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v:3]
+	Parameter BAUD_VAL bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sobel' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v:3]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v:23]
+	Parameter BAUD_VAL bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'new_top' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/new_top.v:23]
+WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v:43]
+WARNING: [Synth 8-6014] Unused sequential element shift_reg_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v:46]
