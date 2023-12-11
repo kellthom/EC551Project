@@ -34,19 +34,21 @@ module UART_on_board_testing(
     output wire rx_light,
     output wire data_valid_light,
     output wire tx_light,
-    output wire [3:0] data_light 
+    output wire [7:0] data_light 
     );
     wire [7:0] data;
     wire data_valid;
     
-    localparam BAUD_VAL = 10417;
+//    localparam BAUD_VAL = 10417; // matching the 9600 baud rate
+    localparam BAUD_VAL = 868; // machign the 115200 baud rate 
+    
     
     assign dummy = 1'b1;
     assign reset_light = reset;
     assign rx_light = rx;
     assign tx_light = tx;
     assign data_valid_light = data_valid;
-    assign data_light[3:0] = data [3:0];
+    assign data_light[7:0] = data [7:0];
     
     
     uart_receiver #(.BAUD_VAL(BAUD_VAL)) recv (
@@ -72,4 +74,5 @@ module UART_on_board_testing(
     
     
     assign tx = tx_active ? tx_temp : 1'b1;
+    
 endmodule

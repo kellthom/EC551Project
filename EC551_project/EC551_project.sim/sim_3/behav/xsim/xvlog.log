@@ -14,5 +14,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/XTYAO/Desktop/551Final/EC5
 INFO: [VRFC 10-311] analyzing module uart_transmitter
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module comprehensive_testbench_v2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.sim/sim_3/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

@@ -3,11 +3,11 @@
 Oct 13 2023
 20:47:58
 C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.sim/sim_3/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v,1701932726,verilog,,,,comprehensive_testbench_v2,,,,,,,,
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v,1702319190,verilog,,,,comprehensive_testbench_v2,,,,,,,,
 C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/ROM_Block.v,1701928653,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/new_top.v,,MultiPortRAM,,,,,,,,
-C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/new_top.v,1702170899,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v,,new_top,,,,,,,,
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/new_top.v,1702319080,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v,,new_top,,,,,,,,
 C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/parse.v,1701919008,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v,,parse,,,,,,,,
 C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v,1701894639,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v,,rgb2gray,,,,,,,,
 C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/sobel.v,1701929899,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v,,sobel,,,,,,,,
-C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v,1701931526,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v,,uart_receiver,,,,,,,,
-C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v,1701931539,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v,,uart_transmitter,,,,,,,,
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v,1702268301,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v,,uart_receiver,,,,,,,,
+C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v,1702265553,verilog,,C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sim_3/new/comprehensive_testbench_v2.v,,uart_transmitter,,,,,,,,

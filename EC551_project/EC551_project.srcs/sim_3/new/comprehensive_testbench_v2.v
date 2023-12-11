@@ -101,8 +101,10 @@ module comprehensive_testbench_v2(
     end
     
     new_top #(.BAUD_VAL(BAUD_VAL)) top(
-        clk, reset, rx,
-        tx, tx_active, tx_done
+        clk,
+        reset,
+        rx,
+        tx
     );
 
 

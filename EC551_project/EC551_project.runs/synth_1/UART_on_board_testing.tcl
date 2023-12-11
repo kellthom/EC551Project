@@ -101,6 +101,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/XTYAO/Desktop/551Final/EC551Project/UART_testing_constraint.xdc
 set_property used_in_implementation false [get_files C:/Users/XTYAO/Desktop/551Final/EC551Project/UART_testing_constraint.xdc]
 
+read_xdc C:/Users/XTYAO/Desktop/551Final/EC551Project/blank_constraint.xdc
+set_property used_in_implementation false [get_files C:/Users/XTYAO/Desktop/551Final/EC551Project/blank_constraint.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/utils_1/imports/synth_1/UART_on_board_testing.dcp

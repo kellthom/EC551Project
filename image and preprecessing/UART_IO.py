@@ -1,17 +1,6 @@
 import serial
+import threading
 
-# Function to transmit data to the FPGA
-def transmit_to_fpga(port, image_data, baud_rate=9600):
-    with serial.Serial(port, baud_rate) as ser:
-        ser.write(image_data)
-        print("Data transmitted to FPGA.")
-
-# Function to receive data back from the FPGA
-def receive_from_fpga(port, data_size, baud_rate=9600, timeout=10):
-    with serial.Serial(port, baud_rate, timeout=timeout) as ser:
-        received_data = ser.read(data_size)
-        print("Data received from FPGA.")
-        return received_data
 
 # Function to read the image bytes from a text file
 def read_image_bytes_from_file(file_path):
@@ -21,25 +10,55 @@ def read_image_bytes_from_file(file_path):
 
 # Function to write data to a file
 def write_data_to_file(file_path, data):
-    with open(file_path, 'wb') as file:
-        file.write(data)
+    with open(file_path, 'w') as file:  # Note the change to 'w' for writing text
+        for byte in data:
+            # Write each byte as hex in a new line
+            file.write(f'{byte:02x}\n')  # Formats byte to 2-digit hex
         print(f"Data written to {file_path}")
 
-###############################################################################################################################
 
-# Define UART port and file paths
+
+# ###############################################################################################################################
+
+# # Define UART port and file paths
 uart_port = 'COM5'  # Replace with the UART port we are using
-input_file_path = 'rgb_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
+baud_rate = 115100
+input_file_path = 'grayscale_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
 output_file_path = 'fpga_image.hex' # Rename this to the file path of the image data we want to receive from the FPGA
+
+# ###############################################################################################################################
+
+
+# Shared Serial Object
+ser = serial.Serial(uart_port, baudrate=baud_rate, timeout=10)
+
+def transmit_to_fpga(image_data):
+    global ser
+    ser.write(image_data)
+    print("Data transmitted to FPGA.")
+
+def receive_from_fpga(data_size):
+    global ser
+    received_data = ser.read(data_size)
+    print("Data received from FPGA.")
+    
+    write_data_to_file(output_file_path, received_data)
+    return received_data
+
 
 # Read the image data from the input file
 image_data = read_image_bytes_from_file(input_file_path)
 
-# Transmit the image data to the FPGA
-transmit_to_fpga(uart_port, image_data)
+data_size = len(image_data)
 
-# Assuming the FPGA sends back the same amount of data
-received_data = receive_from_fpga(uart_port, len(image_data))
+# Create and start threads
+transmit_thread = threading.Thread(target=transmit_to_fpga, args=(image_data,))
+receive_thread = threading.Thread(target=receive_from_fpga, args=(data_size,))
 
-# Write the received data to the output file
-write_data_to_file(output_file_path, received_data)
+transmit_thread.start()
+receive_thread.start()
+
+transmit_thread.join()
+receive_thread.join()
+
+ser.close()

@@ -26,9 +26,7 @@ module new_top #(parameter BAUD_VAL =9)
     input reset,
     input rx,
     
-    output tx,
-    output tx_active,
-    output tx_done
+    output tx
 );
 
     wire [7:0] data;
@@ -120,6 +118,8 @@ module new_top #(parameter BAUD_VAL =9)
     .W(width)
     );
     
+    wire tx_temp, tx_active, tx_done;
+    
     uart_transmitter #(.BAUD_VAL(BAUD_VAL)) trans (
         .clk(clk),
         .data_valid(transmit_valid),
@@ -131,5 +131,6 @@ module new_top #(parameter BAUD_VAL =9)
         .tx_done(tx_done)
     );
     
+    assign tx = tx_active ? tx_temp : 1'b1;
 
 endmodule
