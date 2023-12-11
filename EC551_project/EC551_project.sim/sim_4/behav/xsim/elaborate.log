@@ -1,0 +1,10 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot comprehensive_testbench_v3_behav xil_defaultlib.comprehensive_testbench_v3 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 19 differs from formal bit length 16 for port 'BRAM_PORTA_0_addr' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/ROM_BLOCK_v2.v:28]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

@@ -21,7 +21,7 @@ def write_data_to_file(file_path, data):
 # ###############################################################################################################################
 
 # # Define UART port and file paths
-uart_port = 'COM5'  # Replace with the UART port we are using
+uart_port = 'COM7'  # Replace with the UART port we are using
 baud_rate = 115100
 input_file_path = 'grayscale_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
 output_file_path = 'fpga_image.hex' # Rename this to the file path of the image data we want to receive from the FPGA
@@ -30,7 +30,7 @@ output_file_path = 'fpga_image.hex' # Rename this to the file path of the image 
 
 
 # Shared Serial Object
-ser = serial.Serial(uart_port, baudrate=baud_rate, timeout=10)
+ser = serial.Serial(uart_port, baudrate=baud_rate, timeout=100)
 
 def transmit_to_fpga(image_data):
     global ser

@@ -2,7 +2,7 @@
 verilog xil_defaultlib  \
 "../../../../EC551_project.srcs/sources_1/new/ROM_Block.v" \
 "../../../../EC551_project.srcs/sources_1/new/new_top.v" \
-"../../../../EC551_project.srcs/sources_1/new/parse.v" \
+"../../../../EC551_project.srcs/final_modules/parse_v2.v" \
 "../../../../EC551_project.srcs/sources_1/new/rgb2gray.v" \
 "../../../../EC551_project.srcs/sources_1/new/sobel.v" \
 "../../../../EC551_project.srcs/sources_1/new/uart_receiver.v" \
