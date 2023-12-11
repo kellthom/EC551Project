@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log new_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source new_top.tcl
+EAStep vivado -log UART_on_board_testing.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_on_board_testing.tcl

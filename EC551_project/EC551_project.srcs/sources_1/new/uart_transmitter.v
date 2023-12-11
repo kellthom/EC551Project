@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_transmitter#(parameter BAUD_VAL =9)
+module uart_transmitter#(parameter BAUD_VAL = 9)
     (
     input clk,
     input data_valid,						//Data Valid

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_receiver #(parameter BAUD_VAL =9)
+module uart_receiver #(parameter BAUD_VAL = 9)
     (
     input wire clk,
     input wire reset,
@@ -35,7 +35,7 @@ module uart_receiver #(parameter BAUD_VAL =9)
     reg [2:0] current_state =0, next_state = 0;
     reg [31:0] clk_counter = 32'd0;
     reg [2:0] bit_index = 3'd0;
-    reg [7:0] shift_reg = 8'd0;
+    
 
     always @(posedge clk) begin
         if(reset) begin
@@ -43,7 +43,6 @@ module uart_receiver #(parameter BAUD_VAL =9)
             next_state <= IDLE;
             clk_counter = 0;
             bit_index <= 0;
-            shift_reg <= 0;
             data <= 0;
             data_valid <= 0;
         end else begin
