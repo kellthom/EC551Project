@@ -1,3 +1,4 @@
 Time resolution is 1 ps
 Block Memory Generator module comprehensive_testbench_v3.top.MultiPortRAM.blk_mem_gen_0.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_7_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: xsimkernel Simulation Memory Usage: 22924 KB (Peak: 22924 KB), Simulation CPU Usage: 137281 ms
+$finish called at time : 251904758 ns : File "C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/comprehensive_testbench_v3.v" Line 105
+INFO: xsimkernel Simulation Memory Usage: 31496 KB (Peak: 31496 KB), Simulation CPU Usage: 200046 ms

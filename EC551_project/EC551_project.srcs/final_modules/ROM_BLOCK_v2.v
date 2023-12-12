@@ -35,13 +35,13 @@ module MultiPortRAM_v2
         
         
 //	reg [7:0] rom_memory [0:1000][0:1000];
-    reg [0:15] write_H, write_W;
+    reg [15:0] write_H, write_W;
     
     always @ (reset) begin
         write_H = 16'b0;
         write_W = 16'b0;
         all_loaded = 1'b0;
-        addr_written = 8'b0;
+        addr_written = 8'b11110000;
     end
     
     
@@ -51,8 +51,8 @@ module MultiPortRAM_v2
         if (data_valid) begin
             address = write_H*W + write_W;
             data_in = write_data;
-            addr_written[7:0] = address[7:0];
-
+//            addr_written[7:0] = address[7:0];
+            addr_written = addr_written + 1'b1;
             write_W = write_W + 1'b1;
             if(write_W >= W) begin
                     write_H = write_H + 1'b1;

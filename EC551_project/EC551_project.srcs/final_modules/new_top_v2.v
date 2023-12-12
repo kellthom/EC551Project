@@ -22,29 +22,26 @@
 
 module new_top_v2 #(parameter BAUD_VAL = 87) 
 (
-    input clk,
-    input reset,
-    input rx,
+    input wire clk,
+    input wire reset,
+    input wire rx,
     
-    output tx,
+    output wire tx,
     
-    output dimension_light,    
-    output gray_light,
+    output wire dimension_light,    
+    output wire reset_light,
     output loaded_light,
-    output [7:0] sobel_light,
+//    output wire [7:0] sobel_light,
     
-    output tx_active_light,
+    output wire tx_active,
     
     output [1:0] height_light,
     output [1:0] width_light
-    //For VGA port output
-//    output [3:0] red, 
-//    output [3:0] green, 
-//    output [3:0] blue,
-//    output hsync, 
-//    output vsync
-);
 
+);
+    wire [7:0] sobel_light;
+
+    assign reset_light = reset;
     wire [7:0] data;
     wire data_valid;
 
@@ -77,13 +74,13 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     .data_out(gray_out));
     
    
-    // MultiPortRAM here for storing 
+     // MultiPortRAM here for storing 
     
     wire [15:0] read_H, read_W;
     wire [7:0] data0;
 
-//    assign H = 16'd512;
-//    assign W = 16'd768; 
+    assign H = 16'd512;
+    assign W = 16'd768; 
     wire all_loaded;
     wire [7:0] addr_written;
     
@@ -106,8 +103,6 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     wire transmit_valid;
 	wire matrix_ready;
     
-    wire [7:0] out_sobel;
-    
     sobel_v2 #(.BAUD_VAL(BAUD_VAL)) sobel (
     .clk(clk),
     .rstn(reset),
@@ -123,16 +118,16 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     .W(width)
     );
     
-    wire tx_temp, tx_active, tx_done;
+    wire tx_temp;
     uart_transmitter #(.BAUD_VAL(BAUD_VAL)) trans (
         .clk(clk),
-        .data_valid(one_byte_ready),
+        .data_valid(transmit_valid),
         .reset(reset),
-        .data_in(addr_written),
+        .data_in(out_sobel),
         
         .tx(tx_temp),
         .tx_active(tx_active),
-        .tx_done(tx_done)
+        .tx_done()
     );
     
      assign tx = tx_active ? tx_temp : 1'b1;
@@ -171,6 +166,5 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     assign dimension_light = dimension_received;
     assign gray_light = gray_out;
     assign loaded_light = all_loaded;
-    assign sobel_light = out_sobel;
-    assign tx_active_light = tx_active;
+    assign sobel_light [7:0] = out_sobel[7:0];
 endmodule

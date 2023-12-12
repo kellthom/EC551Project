@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_transmitter#(parameter BAUD_VAL = 9)
+module uart_transmitter#(parameter BAUD_VAL = 87)
     (
     input clk,
     input data_valid,						//Data Valid
@@ -43,12 +43,12 @@ module uart_transmitter#(parameter BAUD_VAL = 9)
     always@(posedge clk) begin
         if(reset) begin
             current_state = IDLE;
-            next_state <= IDLE;
-            clk_counter <= 0;
-            bit_index <= 0;
-            tx <= 1'b1;
-            tx_active <= 1'b0;
-            tx_done <= 1'b0;
+            next_state = IDLE;
+            clk_counter = 0;
+            bit_index = 0;
+            tx = 1'b1;
+            tx_active = 1'b0;
+            tx_done = 1'b0;
         end else begin
             
             case(current_state)

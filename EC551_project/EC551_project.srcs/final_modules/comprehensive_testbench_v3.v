@@ -38,7 +38,7 @@ module comprehensive_testbench_v3(
     reg [7:0] stored_sobel;
 
     parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 115_200;
+    parameter BAUD_RATE = 415_20000;
     localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
     
     // to conver the numbder of clk cycles into nano seconds, * for the two edge of the clk

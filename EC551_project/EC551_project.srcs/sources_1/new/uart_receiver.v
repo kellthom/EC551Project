@@ -20,15 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_receiver #(parameter BAUD_VAL = 9)
+module uart_receiver #(parameter BAUD_VAL = 87)
     (
     input wire clk,
     input wire reset,
     input wire rx,
     output reg [7:0] data,
-    output reg data_valid
+    output reg data_valid,
+    output [1:0] state
     );
-
+    
     // State Definitions
     localparam [2:0] IDLE = 3'd0, START = 3'd1, RXDATA = 3'd2, STOP = 3'd3, CLEANUP = 3'd4;
 
@@ -36,15 +37,15 @@ module uart_receiver #(parameter BAUD_VAL = 9)
     reg [31:0] clk_counter = 32'd0;
     reg [2:0] bit_index = 3'd0;
     
-
+    assign state = current_state;
     always @(posedge clk) begin
         if(reset) begin
-            current_state <= IDLE;
-            next_state <= IDLE;
+            current_state = IDLE;
+            next_state = IDLE;
             clk_counter = 0;
-            bit_index <= 0;
-            data <= 0;
-            data_valid <= 0;
+            bit_index = 0;
+            data = 0;
+            data_valid = 0;
         end else begin
             
             case (current_state)
@@ -61,7 +62,7 @@ module uart_receiver #(parameter BAUD_VAL = 9)
 							 end
 					end
                 START: begin
-						if(clk_counter == (BAUD_VAL-1)/2)		//We are sampling from the middle of the first bit, just to make sure we are ignoring timing issues.
+						if(clk_counter >= (BAUD_VAL-1)/2)		//We are sampling from the middle of the first bit, just to make sure we are ignoring timing issues.
 							begin
 								if(rx == 1'b0)
 									begin
@@ -89,7 +90,7 @@ module uart_receiver #(parameter BAUD_VAL = 9)
 								clk_counter = 0;
 								data[bit_index] = rx;	//We are creating an output BYTE by writing every index of bit one by one.
 								
-								if(bit_index <7)
+								if(bit_index < 7)
 									begin
 										bit_index = bit_index + 1;
 										next_state = RXDATA;
