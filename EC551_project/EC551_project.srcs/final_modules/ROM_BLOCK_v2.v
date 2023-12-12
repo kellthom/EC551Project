@@ -10,8 +10,10 @@ module MultiPortRAM_v2
                      input clk,
                      input [7:0] write_data,
                      output reg all_loaded,
-                     output reg [7:0] data0
-                     );
+                     output reg [7:0] data0,
+                     
+                     output reg [7:0] addr_written
+                    );
   wire [18:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;
   wire [7:0]BRAM_PORTA_0_1_DIN;
@@ -39,15 +41,17 @@ module MultiPortRAM_v2
         write_H = 16'b0;
         write_W = 16'b0;
         all_loaded = 1'b0;
-        
+        addr_written = 8'b0;
     end
+    
     
 
     always @(posedge clk) begin
          
         if (data_valid) begin
-            address <= write_H*W + write_W;
-            data_in <= write_data;
+            address = write_H*W + write_W;
+            data_in = write_data;
+            addr_written[7:0] = address[7:0];
 
             write_W = write_W + 1'b1;
             if(write_W >= W) begin

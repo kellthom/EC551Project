@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Dec 11 16:08:56 2023
+# Process ID: 21700
+# Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/BRAM_blk_mem_gen_0_0_synth_1
+# Command line: vivado.exe -log BRAM_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BRAM_blk_mem_gen_0_0.tcl
+# Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/BRAM_blk_mem_gen_0_0_synth_1/BRAM_blk_mem_gen_0_0.vds
+# Journal file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/BRAM_blk_mem_gen_0_0_synth_1\vivado.jou
+# Running On: Adelia-laptop, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34088 MB
+#-----------------------------------------------------------
+source BRAM_blk_mem_gen_0_0.tcl -notrace

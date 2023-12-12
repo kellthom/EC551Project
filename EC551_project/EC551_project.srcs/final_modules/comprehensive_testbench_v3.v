@@ -38,14 +38,13 @@ module comprehensive_testbench_v3(
     reg [7:0] stored_sobel;
 
     parameter CLK_FREQ = 100_000_000;
-    parameter BAUD_RATE = 401_50000;
+    parameter BAUD_RATE = 115_200;
     localparam BAUD_VAL = CLK_FREQ / BAUD_RATE;
     
     // to conver the numbder of clk cycles into nano seconds, * for the two edge of the clk
     localparam BAUD_CLK = BAUD_VAL * 2;
 
     integer file; 
-    integer file2;
 
     // Clock generation
     always begin
@@ -71,7 +70,7 @@ module comprehensive_testbench_v3(
 
 // Testbench
     initial begin
-        $readmemh("image.mem", image_data);
+        $readmemh("iamge2.mem", image_data);
 //        file2 = $fopen("rgb_image_data.txt", "r");
 //        if(file2==0)begin
 //        $display("rgb_image_data.txt not found");

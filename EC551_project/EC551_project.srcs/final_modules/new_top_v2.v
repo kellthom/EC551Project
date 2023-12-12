@@ -20,16 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module new_top_v2 #(parameter BAUD_VAL =9, IMG_WIDTH = 640, IMG_HEIGHT = 480) 
+module new_top_v2 #(parameter BAUD_VAL = 87) 
 (
     input clk,
     input reset,
     input rx,
     
     output tx,
-    output tx_active,
-    output tx_done
     
+    output dimension_light,    
+    output gray_light,
+    output loaded_light,
+    output [7:0] sobel_light,
+    
+    output tx_active_light,
+    
+    output [1:0] height_light,
+    output [1:0] width_light
     //For VGA port output
 //    output [3:0] red, 
 //    output [3:0] green, 
@@ -78,6 +85,7 @@ module new_top_v2 #(parameter BAUD_VAL =9, IMG_WIDTH = 640, IMG_HEIGHT = 480)
 //    assign H = 16'd512;
 //    assign W = 16'd768; 
     wire all_loaded;
+    wire [7:0] addr_written;
     
     MultiPortRAM_v2  MultiPortRAM(
     .read_H(read_H),
@@ -89,13 +97,16 @@ module new_top_v2 #(parameter BAUD_VAL =9, IMG_WIDTH = 640, IMG_HEIGHT = 480)
     .clk(clk),
     .write_data(gray_out),
     .all_loaded(all_loaded),
-    .data0(data0)
+    .data0(data0),
+    .addr_written(addr_written)
     );
 
     wire sobelready;
     wire [7:0]out_sobel;
     wire transmit_valid;
 	wire matrix_ready;
+    
+    wire [7:0] out_sobel;
     
     sobel_v2 #(.BAUD_VAL(BAUD_VAL)) sobel (
     .clk(clk),
@@ -112,16 +123,19 @@ module new_top_v2 #(parameter BAUD_VAL =9, IMG_WIDTH = 640, IMG_HEIGHT = 480)
     .W(width)
     );
     
+    wire tx_temp, tx_active, tx_done;
     uart_transmitter #(.BAUD_VAL(BAUD_VAL)) trans (
         .clk(clk),
-        .data_valid(transmit_valid),
+        .data_valid(one_byte_ready),
         .reset(reset),
-        .data_in(out_sobel),
+        .data_in(addr_written),
         
-        .tx(tx),
+        .tx(tx_temp),
         .tx_active(tx_active),
         .tx_done(tx_done)
     );
+    
+     assign tx = tx_active ? tx_temp : 1'b1;
     
     //Sobel output ROM
 	/*
@@ -150,4 +164,13 @@ module new_top_v2 #(parameter BAUD_VAL =9, IMG_WIDTH = 640, IMG_HEIGHT = 480)
         .vsync(vsync)
     );
 */
+    
+    assign height_light = height[9:8];
+    assign width_light = width[9:8];
+
+    assign dimension_light = dimension_received;
+    assign gray_light = gray_out;
+    assign loaded_light = all_loaded;
+    assign sobel_light = out_sobel;
+    assign tx_active_light = tx_active;
 endmodule

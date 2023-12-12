@@ -1,77 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1702271582">
-  <File Type="ROUTE-PWR" Name="UART_on_board_testing_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="UART_on_board_testing.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="UART_on_board_testing_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="UART_on_board_testing_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="UART_on_board_testing.msk"/>
-  <File Type="ROUTE-CLK" Name="UART_on_board_testing_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="UART_on_board_testing.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UART_on_board_testing_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="UART_on_board_testing.bit"/>
-  <File Type="BG-DRC" Name="UART_on_board_testing.drc"/>
-  <File Type="BG-BGN" Name="UART_on_board_testing.bgn"/>
-  <File Type="BG-BIN" Name="UART_on_board_testing.bin"/>
-  <File Type="BITSTR-RBT" Name="UART_on_board_testing.rbt"/>
-  <File Type="BITSTR-NKY" Name="UART_on_board_testing.nky"/>
-  <File Type="BITSTR-BMM" Name="UART_on_board_testing_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="UART_on_board_testing.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="UART_on_board_testing_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-SYSDEF" Name="UART_on_board_testing.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="UART_on_board_testing_methodology_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="UART_on_board_testing.ltx"/>
-  <File Type="BOOT-PDI-FILE" Name="UART_on_board_testing_boot.pdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="NPI_FILE" Name="UART_on_board_testing.npi"/>
-  <File Type="OPT-DRC" Name="UART_on_board_testing_drc_opted.rpt"/>
-  <File Type="RBD_FILE" Name="UART_on_board_testing.rbd"/>
-  <File Type="OPT-HWDEF" Name="UART_on_board_testing.hwdef"/>
-  <File Type="PLACE-IO" Name="UART_on_board_testing_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="UART_on_board_testing_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="UART_on_board_testing_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="UART_on_board_testing_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="UART_on_board_testing_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="UART_on_board_testing_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="UART_on_board_testing_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="UART_on_board_testing_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="UART_on_board_testing_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="UART_on_board_testing_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="UART_on_board_testing_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="UART_on_board_testing_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="UART_on_board_testing_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="UART_on_board_testing_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="UART_on_board_testing_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="UART_on_board_testing_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="UART_on_board_testing_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="UART_on_board_testing_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="UART_on_board_testing_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="UART_on_board_testing_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="UART_on_board_testing_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="UART_on_board_testing_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="UART_on_board_testing_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="UART_on_board_testing_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="UART_on_board_testing_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="UART_on_board_testing_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="UART_on_board_testing_postroute_physopt_bb.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1702338698">
+  <File Type="ROUTE-PWR" Name="new_top_v2_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="new_top_v2.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="new_top_v2_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="new_top_v2_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="new_top_v2_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="new_top_v2.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="new_top_v2_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="new_top_v2_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="new_top_v2_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="new_top_v2_opt.dcp"/>
+  <File Type="OPT-DRC" Name="new_top_v2_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="new_top_v2.hwdef"/>
+  <File Type="PWROPT-DCP" Name="new_top_v2_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="new_top_v2_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="new_top_v2_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="new_top_v2_placed.dcp"/>
+  <File Type="PLACE-IO" Name="new_top_v2_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="new_top_v2_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="new_top_v2_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="new_top_v2_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="new_top_v2_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="new_top_v2_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="new_top_v2_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="new_top_v2.bin"/>
+  <File Type="PLACE-TIMING" Name="new_top_v2_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="new_top_v2_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="new_top_v2_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="new_top_v2_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="new_top_v2.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="new_top_v2_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="new_top_v2_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="new_top_v2_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="new_top_v2.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="new_top_v2_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="new_top_v2_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="new_top_v2_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="new_top_v2_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="new_top_v2_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="new_top_v2_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="new_top_v2_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="new_top_v2_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="new_top_v2_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="new_top_v2_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="new_top_v2_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="new_top_v2_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="new_top_v2_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="new_top_v2_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="new_top_v2_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="new_top_v2_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="new_top_v2_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="new_top_v2_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="new_top_v2_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="new_top_v2_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="new_top_v2_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="new_top_v2_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="new_top_v2_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="UART_on_board_testing_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="UART_on_board_testing_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="UART_on_board_testing_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="UART_on_board_testing_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="new_top_v2.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="UART_on_board_testing_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="UART_on_board_testing_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="UART_on_board_testing_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="UART_on_board_testing_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="UART_on_board_testing.pdi"/>
-  <File Type="PL-PDI-FILE" Name="UART_on_board_testing_pld.pdi"/>
-  <File Type="RCFI_FILE" Name="UART_on_board_testing.rcfi"/>
-  <File Type="CFI_FILE" Name="UART_on_board_testing.cfi"/>
-  <File Type="RNPI_FILE" Name="UART_on_board_testing.rnpi"/>
-  <File Type="ROUTE-RQS" Name="UART_on_board_testing_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="UART_on_board_testing_postroute_physopted.rqs"/>
+  <File Type="BITSTR-NKY" Name="new_top_v2.nky"/>
+  <File Type="BITSTR-BMM" Name="new_top_v2_bd.bmm"/>
+  <File Type="PDI-FILE" Name="new_top_v2.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="new_top_v2_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="new_top_v2_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="new_top_v2.rcfi"/>
+  <File Type="CFI_FILE" Name="new_top_v2.cfi"/>
+  <File Type="RNPI_FILE" Name="new_top_v2.rnpi"/>
+  <File Type="NPI_FILE" Name="new_top_v2.npi"/>
+  <File Type="RBD_FILE" Name="new_top_v2.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="new_top_v2.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="new_top_v2.sysdef"/>
+  <File Type="BG-BGN" Name="new_top_v2.bgn"/>
+  <File Type="BG-DRC" Name="new_top_v2.drc"/>
+  <File Type="RDI-RDI" Name="new_top_v2.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="new_top_v2_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="new_top_v2_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/BRAM/BRAM.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/final_modules/ROM_BLOCK_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/final_modules/parse_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rgb2gray.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/final_modules/sobel_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/uart_receiver.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -86,38 +135,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/final_modules/new_top_v2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/UART_on_board_testing.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/BRAM/hdl/BRAM_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ROM_Block.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/parse.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/rgb2gray.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/sobel.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -133,9 +174,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/parse.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sobel.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/iamge2.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="UART_on_board_testing"/>
+      <Option Name="TopModule" Val="new_top_v2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -153,12 +216,13 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../blank_constraint.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/UART_on_board_testing.dcp">
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/new_top_v2.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -181,6 +245,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_blk_mem_gen_0_0"/>
 </GenRun>

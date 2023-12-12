@@ -5,6 +5,5 @@ Running: D:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 19 differs from formal bit length 16 for port 'BRAM_PORTA_0_addr' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/ROM_BLOCK_v2.v:28]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
