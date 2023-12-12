@@ -3,12 +3,11 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Dec 12 01:48:58 2023
-# Process ID: 33572
+# Start of session at: Tue Dec 12 02:32:15 2023
+# Process ID: 30064
 # Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/impl_1
-# Command line: vivado.exe -log UART_on_board_testing.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source UART_on_board_testing.tcl -notrace
-# Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/impl_1/UART_on_board_testing.vdi
+# Command line: vivado.exe -log new_top_v2.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source new_top_v2.tcl -notrace
+# Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/impl_1/new_top_v2.vdi
 # Journal file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/impl_1\vivado.jou
 # Running On: Adelia-laptop, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34088 MB
 #-----------------------------------------------------------
-source UART_on_board_testing.tcl -notrace

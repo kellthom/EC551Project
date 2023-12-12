@@ -40,7 +40,7 @@ module UART_on_board_testing(
     wire data_valid;
     
    // localparam BAUD_VAL = 10417; // matching the 9600 baud rate
-    localparam BAUD_VAL = 868; // maching the 115200 baud rate 
+    localparam BAUD_VAL = 87; // maching the 1152000 baud rate 
     
     
     assign dummy = 1'b1;

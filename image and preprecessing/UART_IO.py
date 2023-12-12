@@ -22,9 +22,12 @@ def write_data_to_file(file_path, data):
 
 # # Define UART port and file paths
 uart_port = 'COM7'  # Replace with the UART port we are using
-baud_rate = 115100  # Replace with the baud rate we are using
+
+# baud_rate = 115207  # Replace with the baud rate we are using
+baud_rate = 1149425  # Replace with the baud rate we are using
+
 # input_file_path = 'grayscale_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
-input_file_path = 'grayscale_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
+input_file_path = 'rgb_image_data.txt' # Rename this to the file path of the image data we want to send to the FPGA
 output_file_path = 'fpga_image.hex' # Rename this to the file path of the image data we want to receive from the FPGA
 
 # ###############################################################################################################################
@@ -50,7 +53,10 @@ def receive_from_fpga(data_size):
 # Read the image data from the input file
 image_data = read_image_bytes_from_file(input_file_path)
 
-data_size = len(image_data)
+
+# data_size = len(image_data)
+# data_size = 512 * 768
+data_size = 510 * 766
 
 # Create and start threads
 transmit_thread = threading.Thread(target=transmit_to_fpga, args=(image_data,))

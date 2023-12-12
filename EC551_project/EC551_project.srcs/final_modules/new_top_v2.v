@@ -36,9 +36,13 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     output wire tx_active,
     
     output [1:0] height_light,
-    output [1:0] width_light
+//    output [1:0] width_light
+    
+    output dv
 
 );
+
+    
     wire [7:0] sobel_light;
 
     assign reset_light = reset;
@@ -58,6 +62,8 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     wire dimension_received, one_byte_ready;
     wire [7:0] gray_out;
     
+    assign dv = ~one_byte_ready;
+    
     parse_v2 parse1(
     .clk(clk),
     .reset(reset),
@@ -67,7 +73,8 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     .data_out_r(data_out_r),.data_out_g(data_out_g),.data_out_b(data_out_b),
     .height(height),.width(width),
     .dimension_received(dimension_received),
-    .one_byte_ready(one_byte_ready));
+    .one_byte_ready(one_byte_ready)
+    );
     
     rgb2gray rgb2gray(
     .data_in_red(data_out_r),.data_in_green(data_out_g),.data_in_blue(data_out_b),
@@ -79,8 +86,8 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
     wire [15:0] read_H, read_W;
     wire [7:0] data0;
 
-    assign H = 16'd512;
-    assign W = 16'd768; 
+//    assign H = 16'd512;
+//    assign W = 16'd768; 
     wire all_loaded;
     wire [7:0] addr_written;
     
@@ -161,7 +168,7 @@ module new_top_v2 #(parameter BAUD_VAL = 87)
 */
     
     assign height_light = height[9:8];
-    assign width_light = width[9:8];
+//    assign width_light = width[9:8];
 
     assign dimension_light = dimension_received;
     assign gray_light = gray_out;

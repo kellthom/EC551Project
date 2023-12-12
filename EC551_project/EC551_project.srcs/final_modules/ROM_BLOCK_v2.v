@@ -14,6 +14,9 @@ module MultiPortRAM_v2
                      
                      output reg [7:0] addr_written
                     );
+                    
+                    assign dv = data_valid;
+                    
   wire [18:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;
   wire [7:0]BRAM_PORTA_0_1_DIN;
@@ -36,50 +39,48 @@ module MultiPortRAM_v2
         
 //	reg [7:0] rom_memory [0:1000][0:1000];
     reg [15:0] write_H, write_W;
-    
-    always @ (reset) begin
-        write_H = 16'b0;
-        write_W = 16'b0;
-        all_loaded = 1'b0;
-        addr_written = 8'b11110000;
-    end
-    
-    
+
 
     always @(posedge clk) begin
-         
-        if (data_valid) begin
-            address = write_H*W + write_W;
-            data_in = write_data;
-//            addr_written[7:0] = address[7:0];
-            addr_written = addr_written + 1'b1;
-            write_W = write_W + 1'b1;
-            if(write_W >= W) begin
-                    write_H = write_H + 1'b1;
-                    if (write_H >= H) begin
-                        all_loaded = 1'b1;
-                    end
-                    write_W = 16'b0;
-            
-           end
+        if(reset) begin 
+            write_H = 16'b0;
+            write_W = 16'b0;
+            all_loaded = 1'b0;
+            addr_written = 8'b11110000;
         end else begin
-            if (all_loaded) begin
-//                $display("all_loaded");
-//                if(read_H>100&read_H<105 & read_W>100 & read_W<105)begin
-//                $display("read_H=",read_H);
-//                $display("read_W=",read_W);
-//                $display("BRAM_PORTA_0_1_DOUT=",BRAM_PORTA_0_1_DOUT);
-//                end
-                address <= read_H*W + read_W;
-                data0 <= BRAM_PORTA_0_1_DOUT;
-//                data1 <= rom_memory [read_H][read_W+1];
-//                data2 <= rom_memory [read_H][read_W+2];
-//                data3 <= rom_memory [read_H+1][read_W];
-//                data4 <= rom_memory [read_H+1][read_W+1];
-//                data5 <= rom_memory [read_H+1][read_W+2];
-//                data6 <= rom_memory [read_H+2][read_W];
-//                data7 <= rom_memory [read_H+2][read_W+1];
-//                data8 <= rom_memory [read_H+2][read_W+2];
+        
+            if (data_valid) begin
+                address = write_H*W + write_W;
+                data_in = write_data;
+    //            addr_written[7:0] = address[7:0];
+                addr_written = addr_written + 1'b1;
+                write_W = write_W + 1'b1;
+                if(write_W >= W) begin
+                        write_H = write_H + 1'b1;
+                        if (write_H >= H) begin
+                            all_loaded = 1'b1;
+                        end
+                        write_W = 16'b0;
+                end
+            end else begin
+                if (all_loaded) begin
+    //                $display("all_loaded");
+    //                if(read_H>100&read_H<105 & read_W>100 & read_W<105)begin
+    //                $display("read_H=",read_H);
+    //                $display("read_W=",read_W);
+    //                $display("BRAM_PORTA_0_1_DOUT=",BRAM_PORTA_0_1_DOUT);
+    //                end
+                    address <= read_H*W + read_W;
+                    data0 <= BRAM_PORTA_0_1_DOUT;
+    //                data1 <= rom_memory [read_H][read_W+1];
+    //                data2 <= rom_memory [read_H][read_W+2];
+    //                data3 <= rom_memory [read_H+1][read_W];
+    //                data4 <= rom_memory [read_H+1][read_W+1];
+    //                data5 <= rom_memory [read_H+1][read_W+2];
+    //                data6 <= rom_memory [read_H+2][read_W];
+    //                data7 <= rom_memory [read_H+2][read_W+1];
+    //                data8 <= rom_memory [read_H+2][read_W+2];
+                end
             end
         end
     end
