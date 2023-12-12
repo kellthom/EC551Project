@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 12 11:11:52 2023
+# Process ID: 10324
+# Current directory: C:/Users/shiningy/LASTONE/LASTONE.runs/BRAM_blk_mem_gen_0_0_synth_1
+# Command line: vivado.exe -log BRAM_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BRAM_blk_mem_gen_0_0.tcl
+# Log file: C:/Users/shiningy/LASTONE/LASTONE.runs/BRAM_blk_mem_gen_0_0_synth_1/BRAM_blk_mem_gen_0_0.vds
+# Journal file: C:/Users/shiningy/LASTONE/LASTONE.runs/BRAM_blk_mem_gen_0_0_synth_1\vivado.jou
+# Running On: ECE-PHO115-126, OS: Windows, CPU Frequency: 3610 MHz, CPU Physical cores: 12, Host memory: 16853 MB
+#-----------------------------------------------------------
+source BRAM_blk_mem_gen_0_0.tcl -notrace
