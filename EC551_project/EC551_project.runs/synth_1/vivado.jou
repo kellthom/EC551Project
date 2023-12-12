@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Dec 12 02:31:27 2023
-# Process ID: 24200
+# Start of session at: Tue Dec 12 02:46:10 2023
+# Process ID: 36108
 # Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1
 # Command line: vivado.exe -log new_top_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source new_top_v2.tcl
 # Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/new_top_v2.vds

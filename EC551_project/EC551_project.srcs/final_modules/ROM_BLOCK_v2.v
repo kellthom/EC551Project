@@ -14,8 +14,7 @@ module MultiPortRAM_v2
                      
                      output reg [7:0] addr_written
                     );
-                    
-                    assign dv = data_valid;
+                  
                     
   wire [18:0]BRAM_PORTA_0_1_ADDR;
   wire BRAM_PORTA_0_1_CLK;

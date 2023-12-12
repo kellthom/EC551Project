@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module sobel_v2 #(parameter BAUD_VAL =9)
+module sobel_v2 #(parameter BAUD_VAL = 9)
     (
         input clk,
         input rstn,

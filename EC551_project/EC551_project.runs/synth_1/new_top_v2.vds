@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Dec 12 02:31:27 2023
-# Process ID: 24200
+# Start of session at: Tue Dec 12 02:46:10 2023
+# Process ID: 36108
 # Current directory: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1
 # Command line: vivado.exe -log new_top_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source new_top_v2.tcl
 # Log file: C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/new_top_v2.vds
@@ -27,9 +27,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36728
+INFO: [Synth 8-7075] Helper process launched with PID 24820
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1347.570 ; gain = 440.535
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.625 ; gain = 440.695
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'dv', assumed default net type 'wire' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/ROM_BLOCK_v2.v:18]
 INFO: [Synth 8-11241] undeclared symbol 'gray_light', assumed default net type 'wire' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/new_top_v2.v:174]
@@ -45,8 +45,8 @@ INFO: [Synth 8-6157] synthesizing module 'rgb2gray' [C:/Users/XTYAO/Desktop/551F
 INFO: [Synth 8-6155] done synthesizing module 'rgb2gray' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/rgb2gray.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MultiPortRAM_v2' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/ROM_BLOCK_v2.v:3]
 INFO: [Synth 8-6157] synthesizing module 'BRAM' [c:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.gen/sources_1/bd/BRAM/synth/BRAM.v:13]
-INFO: [Synth 8-6157] synthesizing module 'BRAM_blk_mem_gen_0_0' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/.Xil/Vivado-24200-Adelia-laptop/realtime/BRAM_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BRAM_blk_mem_gen_0_0' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/.Xil/Vivado-24200-Adelia-laptop/realtime/BRAM_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BRAM_blk_mem_gen_0_0' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/.Xil/Vivado-36108-Adelia-laptop/realtime/BRAM_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BRAM_blk_mem_gen_0_0' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/.Xil/Vivado-36108-Adelia-laptop/realtime/BRAM_blk_mem_gen_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'BRAM' (0#1) [c:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.gen/sources_1/bd/BRAM/synth/BRAM.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'MultiPortRAM_v2' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/ROM_BLOCK_v2.v:3]
 INFO: [Synth 8-6157] synthesizing module 'sobel_v2' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:3]
@@ -57,30 +57,74 @@ INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [C:/Users/XTYAO/Desk
 INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'new_top_v2' (0#1) [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/new_top_v2.v:23]
 WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_receiver.v:44]
+WARNING: [Synth 8-6014] Unused sequential element first_time_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:40]
 WARNING: [Synth 8-6014] Unused sequential element final_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:41]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[0][3] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[1][1] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[1][3] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[2][2] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[2][3] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[3][0] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[3][1] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[3][2] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element data_reg[3][3] was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:86]
+WARNING: [Synth 8-6014] Unused sequential element Gx_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:53]
+WARNING: [Synth 8-6014] Unused sequential element Gy_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:57]
+WARNING: [Synth 8-3848] Net data_out in module/entity sobel_v2 does not have driver. [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:11]
 WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/sources_1/new/uart_transmitter.v:46]
+WARNING: [Synth 8-7129] Port data_out[7] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[6] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[5] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[4] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[3] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[2] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[1] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_out[0] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[7] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[6] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[5] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[4] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[3] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[2] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[1] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data0[0] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[15] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[14] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[13] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[12] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[11] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[10] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[9] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[8] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[7] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[6] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[5] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[4] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[3] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[2] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[1] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port H[0] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[15] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[14] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[13] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[12] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[11] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[10] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[9] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[8] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[7] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[6] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[5] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[4] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[3] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[2] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[1] in module sobel_v2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W[0] in module sobel_v2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1464.820 ; gain = 557.785
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.680 ; gain = 555.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1464.820 ; gain = 557.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.680 ; gain = 555.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1464.820 ; gain = 557.785
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1462.680 ; gain = 555.750
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1464.820 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1462.680 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -114,23 +158,23 @@ Parsing XDC File [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC5
 Finished Parsing XDC File [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1565.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1554.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1565.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1554.285 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'MultiPortRAM/blk_mem_gen_0/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -138,10 +182,8 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for MultiPortRAM/blk_mem_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for MultiPortRAM/blk_mem_gen_0/blk_mem_gen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3936] Found unconnected internal register 'Gx_reg' and it is trimmed from '16' to '8' bits. [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:197]
-WARNING: [Synth 8-3936] Found unconnected internal register 'Gy_reg' and it is trimmed from '16' to '8' bits. [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:201]
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'uart_transmitter'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -154,31 +196,31 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'uart_transmitter'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 8     
-	   2 Input   16 Bit       Adders := 6     
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 3     
 	   2 Input    8 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    3 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 2     
 	               19 Bit    Registers := 1     
 	               16 Bit    Registers := 4     
-	                8 Bit    Registers := 18    
-	                3 Bit    Registers := 5     
-	                1 Bit    Registers := 10    
+	                8 Bit    Registers := 10    
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   6 Input   32 Bit        Muxes := 1     
 	   2 Input   32 Bit        Muxes := 4     
 	   5 Input   32 Bit        Muxes := 1     
 	   2 Input   19 Bit        Muxes := 3     
-	   2 Input   16 Bit        Muxes := 5     
+	   2 Input   16 Bit        Muxes := 4     
 	   6 Input    8 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 5     
 	   6 Input    3 Bit        Muxes := 1     
@@ -186,7 +228,7 @@ Detailed RTL Component Info :
 	   5 Input    3 Bit        Muxes := 2     
 	   3 Input    2 Bit        Muxes := 2     
 	   6 Input    1 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 21    
+	   2 Input    1 Bit        Muxes := 7     
 	   5 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -204,118 +246,19 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP address0, operation Mode is: C'+A2*B.
-DSP Report: register write_H_reg is absorbed into DSP address0.
-DSP Report: register write_W_reg is absorbed into DSP address0.
-DSP Report: operator address0 is absorbed into DSP address0.
-DSP Report: operator address1 is absorbed into DSP address0.
-DSP Report: Generating DSP address0, operation Mode is: C+A*B.
-DSP Report: operator address0 is absorbed into DSP address0.
-DSP Report: operator address1 is absorbed into DSP address0.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[31]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[30]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[29]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[28]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[27]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[26]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[25]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[24]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[23]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[22]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[21]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[20]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[19]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[18]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[17]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[16]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[15]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[14]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[13]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[12]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[11]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[10]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[9]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[8]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[7]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[6]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[5]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[4]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[3]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[2]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[1]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'sobel/first_time_reg[0]__0/Q' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.srcs/final_modules/sobel_v2.v:36]
-WARNING: [Synth 8-3332] Sequential element (trans/FSM_sequential_current_state_reg[2]) is unused and will be removed from module new_top_v2.
-WARNING: [Synth 8-3332] Sequential element (trans/FSM_sequential_current_state_reg[1]) is unused and will be removed from module new_top_v2.
-WARNING: [Synth 8-3332] Sequential element (trans/FSM_sequential_current_state_reg[0]) is unused and will be removed from module new_top_v2.
+DSP Report: Generating DSP MultiPortRAM/address0, operation Mode is: C'+A2*B.
+DSP Report: register MultiPortRAM/write_H_reg is absorbed into DSP MultiPortRAM/address0.
+DSP Report: register MultiPortRAM/write_W_reg is absorbed into DSP MultiPortRAM/address0.
+DSP Report: operator MultiPortRAM/address0 is absorbed into DSP MultiPortRAM/address0.
+DSP Report: operator MultiPortRAM/address1 is absorbed into DSP MultiPortRAM/address0.
+DSP Report: Generating DSP MultiPortRAM/address0, operation Mode is: C+A*B.
+DSP Report: operator MultiPortRAM/address0 is absorbed into DSP MultiPortRAM/address0.
+DSP Report: operator MultiPortRAM/address1 is absorbed into DSP MultiPortRAM/address0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
- Sort Area is  address0_2 : 0 0 : 2034 2034 : Used 1 time 0
- Sort Area is  address0_0 : 0 0 : 2002 2002 : Used 1 time 0
+ Sort Area is  MultiPortRAM/address0_2 : 0 0 : 2034 2034 : Used 1 time 0
+ Sort Area is  MultiPortRAM/address0_0 : 0 0 : 2002 2002 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -337,19 +280,19 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'sys_clk_pin'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -367,37 +310,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -425,41 +368,41 @@ Report Cell Usage:
 +------+-------------------+------+
 |1     |BRAM_blk_mem_gen_0 |     1|
 |2     |BUFG               |     1|
-|3     |CARRY4             |   132|
+|3     |CARRY4             |   130|
 |4     |DSP48E1            |     2|
 |6     |LUT1               |    79|
-|7     |LUT2               |   118|
+|7     |LUT2               |   120|
 |8     |LUT3               |    91|
-|9     |LUT4               |    96|
-|10    |LUT5               |    52|
-|11    |LUT6               |   221|
-|12    |FDRE               |   213|
-|13    |IBUF               |     3|
-|14    |OBUF               |     8|
+|9     |LUT4               |   102|
+|10    |LUT5               |    56|
+|11    |LUT6               |   229|
+|12    |FDRE               |   226|
+|13    |FDSE               |     2|
+|14    |IBUF               |     3|
+|15    |OBUF               |     8|
 +------+-------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 96 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1565.621 ; gain = 557.785
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1565.621 ; gain = 658.586
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1554.285 ; gain = 555.750
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1554.285 ; gain = 647.355
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1565.621 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 134 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1554.285 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1565.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1554.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 7850caca
+Synth Design complete | Checksum: 1e08298a
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 37 Warnings, 96 Critical Warnings and 0 Errors encountered.
+47 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1565.621 ; gain = 1066.480
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1565.621 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1554.285 ; gain = 1055.488
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1554.285 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.runs/synth_1/new_top_v2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file new_top_v2_utilization_synth.rpt -pb new_top_v2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 02:32:07 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 02:46:49 2023...

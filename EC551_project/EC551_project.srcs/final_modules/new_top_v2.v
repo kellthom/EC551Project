@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module new_top_v2 #(parameter BAUD_VAL = 87) 
+module new_top_v2 #(parameter BAUD_VAL = 30) 
 (
     input wire clk,
     input wire reset,
