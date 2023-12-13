@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load an image
-image = cv2.imread('tiger.jpg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('minions.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Check if image is loaded properly
 if image is None:
@@ -27,16 +27,19 @@ else:
     # Combine X and Y
     sobel_combined = cv2.bitwise_or(sobelx, sobely)
     
-    _, thresholded = cv2.threshold(sobel_combined, 200, 255, cv2.THRESH_BINARY)
+    _, thresholded = cv2.threshold(sobel_combined, 150, 255, cv2.THRESH_BINARY)
     cv2.imshow('Sobel Combined', sobel_combined)
 
-    cv2.imshow('Thresholded', thresholded)
+    # cv2.imshow('Thresholded', thresholded)
 
-    edges = cv2.Canny(image, threshold1=100, threshold2=200)
 
-    # Display the edges
-    cv2.imshow('Canny Edges', edges)
+    # canny edge detection
+    # edges = cv2.Canny(image, threshold1=100, threshold2=200)
 
+    # # Display the edges
+    # cv2.imshow('Canny Edges', edges)
+
+    cv2.imwrite('canny.jpg', sobel_combined)
 
 
     cv2.waitKey(0)
