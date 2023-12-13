@@ -1,12 +1,0 @@
-ssrcscan startsssrcscan exits with return value 0
-d as:
-# C:\Users\XTYAO\Desktop\551Final\EC551Project\EC551_project\hs_err_pid28196.log
-srcscan starts
-INFO: analyzing module MultiPortRAM (VERI-9002)
-INFO: analyzing module parse (VERI-9002)
-INFO: analyzing module rgb2gray (VERI-9002)
-INFO: analyzing module sobel (VERI-9002)
-INFO: analyzing module uart_receiver (VERI-9002)
-INFO: analyzing module uart_transmitter (VERI-9002)
-INFO: analyzing module new_top (VERI-9002)
-srcscan exits with return value 0
