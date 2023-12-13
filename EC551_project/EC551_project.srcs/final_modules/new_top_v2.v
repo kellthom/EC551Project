@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module new_top_v2 #(parameter BAUD_VAL = 30) 
+module new_top_v2 #(parameter BAUD_VAL = 87) 
 (
     input wire clk,
     input wire reset,
@@ -35,10 +35,9 @@ module new_top_v2 #(parameter BAUD_VAL = 30)
     
     output wire tx_active,
     
-    output [1:0] height_light,
+    output [1:0] height_light
 //    output [1:0] width_light
     
-    output dv
 
 );
 
@@ -61,8 +60,6 @@ module new_top_v2 #(parameter BAUD_VAL = 30)
     wire [15:0] height, width;
     wire dimension_received, one_byte_ready;
     wire [7:0] gray_out;
-    
-    assign dv = ~one_byte_ready;
     
     parse_v2 parse1(
     .clk(clk),
@@ -120,7 +117,6 @@ module new_top_v2 #(parameter BAUD_VAL = 30)
     .data_out(out_sobel),
     .ready(sobelready),
     .transmit_valid(transmit_valid),
-	.matrix_ready(matrix_ready),
     .H(height),
     .W(width)
     );

@@ -1,6 +1,6 @@
 #Set to desired filenames
-read_file=open("coe_test.txt")
-write_file=open("coe.txt","w")
+read_file=open("grayscale_image_data_640.txt")
+write_file=open("coe2.txt","w")
 
 lines=read_file.readlines()
 

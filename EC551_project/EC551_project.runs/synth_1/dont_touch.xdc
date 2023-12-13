@@ -5,10 +5,10 @@
 
 # XDC: C:/Users/XTYAO/Desktop/551Final/EC551Project/blank_constraint.xdc
 
-# Block Designs: bd/BRAM/BRAM.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM || ORIG_REF_NAME==BRAM} -quiet] -quiet
+# Block Designs: bd/BRAM1/BRAM1.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM1 || ORIG_REF_NAME==BRAM1} -quiet] -quiet
 
-# IP: bd/BRAM/ip/BRAM_blk_mem_gen_0_0/BRAM_blk_mem_gen_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM_blk_mem_gen_0_0 || ORIG_REF_NAME==BRAM_blk_mem_gen_0_0} -quiet] -quiet
+# IP: bd/BRAM1/ip/BRAM1_blk_mem_gen_0_0/BRAM1_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM1_blk_mem_gen_0_0 || ORIG_REF_NAME==BRAM1_blk_mem_gen_0_0} -quiet] -quiet
 
-# XDC: c:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.gen/sources_1/bd/BRAM/BRAM_ooc.xdc
+# XDC: c:/Users/XTYAO/Desktop/551Final/EC551Project/EC551_project/EC551_project.gen/sources_1/bd/BRAM1/BRAM1_ooc.xdc

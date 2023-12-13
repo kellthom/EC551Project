@@ -6,23 +6,4 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.uart_receiver
-Compiling module xil_defaultlib.parse_v2
-Compiling module xil_defaultlib.rgb2gray
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_output_stage(...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_output_stage(...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_softecc_outpu...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_7.blk_mem_gen_v8_4_7(C_FAMILY="art...
-Compiling module xil_defaultlib.BRAM_blk_mem_gen_0_0
-Compiling module xil_defaultlib.BRAM
-Compiling module xil_defaultlib.MultiPortRAM_v2
-Compiling module xil_defaultlib.sobel_v2(BAUD_VAL=2)
-Compiling module xil_defaultlib.uart_transmitter(BAUD_VAL=2)
-Compiling module xil_defaultlib.new_top_v2(BAUD_VAL=2)
-Compiling module xil_defaultlib.comprehensive_testbench_v3
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot comprehensive_testbench_v3_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

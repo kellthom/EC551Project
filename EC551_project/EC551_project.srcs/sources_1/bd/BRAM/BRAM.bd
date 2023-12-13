@@ -83,8 +83,14 @@
           "Byte_Size": {
             "value": "8"
           },
+          "Coe_File": {
+            "value": "../../../../../../../image and preprecessing/coe2.txt"
+          },
           "Enable_A": {
             "value": "Always_Enabled"
+          },
+          "Load_Init_File": {
+            "value": "true"
           },
           "Use_Byte_Write_Enable": {
             "value": "true"

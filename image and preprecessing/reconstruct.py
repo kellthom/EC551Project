@@ -27,12 +27,12 @@ def bytes_per_line_to_image(input_file_path, output_image_path, image_width, ima
     # Save the image
     image.save(output_image_path)
 
-# input_file_path = 'received_data.hex'  # Input file
+# input_file_path = 'tiger_grayscale_480.txt'  # Input file
 
 input_file_path = 'fpga_image.hex'  # Input file
-output_image_path = 'reconstructed_image.jpg' # Where to save the reconstructed image
-image_width = 768  # Replace with the actual width of the input image
-image_height = 512 # Replace with the actual height of the input image
+output_image_path = 'reconstructed_image2.jpg' # Where to save the reconstructed image
+image_width = 640  # Replace with the actual width of the input image
+image_height = 480 # Replace with the actual height of the input image
 bytes_per_line_to_image(input_file_path, output_image_path, image_width, image_height)
 
 

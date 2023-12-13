@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1702401022">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1702428200">
   <File Type="ROUTE-PWR" Name="new_top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="new_top.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="new_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="new_top_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="new_top_rqa_opted.pb"/>
   <File Type="BITSTR-MMI" Name="new_top.mmi"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="new_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="new_top_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="new_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="new_top_reports.tcl"/>
   <File Type="OPT-TIMING" Name="new_top_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="new_top_opt.dcp"/>
   <File Type="OPT-DRC" Name="new_top_drc_opted.rpt"/>
@@ -24,6 +25,8 @@
   <File Type="PLACE-PRE-SIMILARITY" Name="new_top_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BIN" Name="new_top.bin"/>
   <File Type="PLACE-TIMING" Name="new_top_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="new_top_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="new_top_rqa_placed.pb"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="new_top_postplace_pwropt.dcp"/>
   <File Type="BITSTR-MSK" Name="new_top.msk"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="new_top_timing_summary_postplace_pwropted.rpt"/>
@@ -40,7 +43,7 @@
   <File Type="ROUTE-METHODOLOGY-DRC" Name="new_top_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="new_top_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="new_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="new_top_power_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="new_top_rqs_routed.pb"/>
   <File Type="ROUTE-STATUS" Name="new_top_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="new_top_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="new_top_timing_summary_routed.rpt"/>
@@ -63,6 +66,8 @@
   <File Type="BITSTR-NKY" Name="new_top.nky"/>
   <File Type="BITSTR-BMM" Name="new_top_bd.bmm"/>
   <File Type="PDI-FILE" Name="new_top.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="new_top_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="new_top_pld.pdi"/>
   <File Type="RCFI_FILE" Name="new_top.rcfi"/>
   <File Type="CFI_FILE" Name="new_top.cfi"/>
   <File Type="RNPI_FILE" Name="new_top.rnpi"/>
@@ -88,28 +93,56 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../FPGA_PROJECT/final/Block_Rom.v">
+    <File Path="$PPRDIR/Block_Rom.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../FPGA_PROJECT/final/VGA.v">
+    <File Path="$PPRDIR/VGA.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../FPGA_PROJECT/final/sobel.v">
+    <File Path="$PPRDIR/parse.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../FPGA_PROJECT/final/new_top.v">
+    <File Path="$PPRDIR/rgb2gray.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/sobel.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/uart_receiver.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/uart_transmitter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/new_top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -130,7 +163,7 @@
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
-  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/constraint.xdc">
       <FileInfo>
@@ -142,7 +175,7 @@
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
-  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
     <File Path="$PSRCDIR/utils_1/imports/synth_1/new_top.dcp">
       <FileInfo>

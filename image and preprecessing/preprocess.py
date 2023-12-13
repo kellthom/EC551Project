@@ -13,8 +13,8 @@ def image_to_grayscale_bytes_per_line(input_image_path, output_file_path):
             for pixel in list(grayscale_img.getdata()):
                 file.write(f'{pixel:02x}\n')  # Write byte in hexadecimal format
 
-input_image_path = 'iguana.jpg'
-output_file_path = 'grayscale_image_data.txt'      # Output file
+input_image_path = 'iguana_480.jpg'
+output_file_path = 'iguana_grayscale_480.txt'      # Output file
 image_to_grayscale_bytes_per_line(input_image_path, output_file_path)
 
 def image_to_rgb_bytes(input_image_path, output_file_path):
@@ -41,5 +41,5 @@ def image_to_rgb_bytes(input_image_path, output_file_path):
                 file.write(f'{b:02x}\n')  # Blue
 
 
-output_file_path = 'rgb_image_data.txt'      # Output file
+output_file_path = 'iguana_rgb_480.txt'      # Output file
 image_to_rgb_bytes(input_image_path, output_file_path)

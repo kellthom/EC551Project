@@ -1,14 +1,14 @@
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 12 12:10:55 2023
-| Host         : ECE-PHO115-126 running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Tue Dec 12 19:45:02 2023
+| Host         : Adelia-laptop running 64-bit major release  (build 9200)
 | Command      : report_drc -file new_top_drc_opted.rpt -pb new_top_drc_opted.pb -rpx new_top_drc_opted.rpx
 | Design       : new_top
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
 | Design State : Synthesized
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Report DRC
 
@@ -24,12 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 7
+             Violations found: 8
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | DPIP-1   | Warning  | Input pipelining                                    | 5          |
+| DPOP-1   | Warning  | PREG Output pipelining                              | 1          |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
@@ -50,27 +51,32 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP Block_Rom/read_address_reg input Block_Rom/read_address_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP Block_Rom/p_0_out input Block_Rom/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP Block_Rom/read_address_reg input Block_Rom/read_address_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP Block_Rom/p_2_out input Block_Rom/p_2_out/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP Block_Rom/write_address_reg input Block_Rom/write_address_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP Block_Rom/p_2_out input Block_Rom/p_2_out/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP Block_Rom/write_address_reg input Block_Rom/write_address_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP Block_Rom/read_address_reg input Block_Rom/read_address_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP p_0_out input p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP Block_Rom/read_address_reg input Block_Rom/read_address_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP Block_Rom/p_2_out output Block_Rom/p_2_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning

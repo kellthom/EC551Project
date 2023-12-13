@@ -6,7 +6,7 @@
 # Block Designs: bd/BRAM/BRAM.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM || ORIG_REF_NAME==BRAM} -quiet] -quiet
 
-# IP: bd/BRAM/ip/BRAM_blk_mem_gen_0_0_1/BRAM_blk_mem_gen_0_0.xci
+# IP: bd/BRAM/ip/BRAM_blk_mem_gen_0_0_2/BRAM_blk_mem_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BRAM_blk_mem_gen_0_0 || ORIG_REF_NAME==BRAM_blk_mem_gen_0_0} -quiet] -quiet
 
-# XDC: c:/Users/shiningy/LASTONE/LASTONE.gen/sources_1/bd/BRAM/BRAM_ooc.xdc
+# XDC: c:/Users/XTYAO/Desktop/551Final/EC551Project/LASTONE/LASTONE.gen/sources_1/bd/BRAM/BRAM_ooc.xdc

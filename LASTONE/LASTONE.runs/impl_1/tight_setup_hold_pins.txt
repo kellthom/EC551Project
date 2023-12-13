@@ -1,5 +1,41 @@
-+====================+===================+===================+
-| Launch Setup Clock | Launch Hold Clock | Pin               |
-+====================+===================+===================+
-| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[7]/D |
-+--------------------+-------------------+-------------------+
++====================+===================+===================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                               |
++====================+===================+===================================+
+| sys_clk_pin        | sys_clk_pin       | parse1/data_g_reg[0]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_r_reg[0]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_g_reg[6]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_r_reg[1]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_g_reg[5]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_r_reg[7]/D            |
+| sys_clk_pin        | sys_clk_pin       | parse1/data_r_reg[2]/D            |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[7]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[5]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[4]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[3]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[7]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[6]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[5]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[2]/D                 |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[16]/D |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[4]/D                 |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[15]/D |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[14]/D |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[2]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[17]/D |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[1]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[3]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[13]/D |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[12]/D |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[8]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[0]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[5]/D  |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[3]/D                 |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[18]/D |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gy_reg[1]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[2]/D                 |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[9]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[6]/D  |
+| sys_clk_pin        | sys_clk_pin       | Block_Rom/write_address_reg[10]/D |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[1]/D                 |
+| sys_clk_pin        | sys_clk_pin       | sobel/Gx_reg[0]/D                 |
++--------------------+-------------------+-----------------------------------+
